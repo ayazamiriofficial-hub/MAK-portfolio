@@ -4,13 +4,15 @@ A responsive, accessible portfolio built with plain HTML, CSS, and JavaScript. T
 
 ## Run locally
 
-Open `index.html` in a browser, or start a local static server from the project directory:
+From the project directory, start a local static server:
 
 ```powershell
 python -m http.server 4173
 ```
 
-Then visit `http://localhost:4173`.
+Keep the terminal window open while you browse to `http://localhost:4173`. The server stops when you close its terminal; if the address stops loading, start the command again.
+
+The contact form validates the fields in your browser, then prepares a prefilled email draft in your default email app. It does not collect or store submissions on this website.
 
 ## Deploy to Vercel
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f5f4ee">
+    <meta name="theme-color" content="#F1F5F9">
     <meta name="description" content="The portfolio of Mohammad Ayaz Amiri — a background verification and operations professional, Information Science & Engineering graduate, and creator of IoT security and Android projects.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mohammad Ayaz Amiri — Portfolio">
@@ -235,7 +235,33 @@
 
       <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
         <div class="section-wrap contact-wrap">
-          <div class="contact-copy reveal"><p class="eyebrow">06 — Start a conversation</p><h2 id="contact-title">Good things<br>begin with <span class="serif-accent">hello.</span></h2><p class="contact-lede">Have a role, collaboration, or idea in mind? I’d be glad to hear from you.</p><a class="contact-email" href="mailto:ayaz.amiriofficial@gmail.com">ayaz.amiriofficial@gmail.com <span aria-hidden="true">↗</span></a></div>
+          <div class="contact-copy reveal">
+            <p class="eyebrow">06 — Start a conversation</p>
+            <h2 id="contact-title">Good things<br>begin with <span class="serif-accent">hello.</span></h2>
+            <p class="contact-lede">Have a role, collaboration, or idea in mind? Send me a message.</p>
+            <form class="contact-form" id="contact-form" action="mailto:ayaz.amiriofficial@gmail.com" method="post" enctype="text/plain">
+              <div class="form-field">
+                <label for="contact-name">Name</label>
+                <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Your name" required>
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Email</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
+              </div>
+              <div class="form-field">
+                <label for="contact-phone">Phone <span>(optional)</span></label>
+                <input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="+49 123 456 789">
+              </div>
+              <div class="form-field form-field-message">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="4" maxlength="4000" placeholder="What would you like to talk about?" required></textarea>
+              </div>
+              <button class="button button-dark form-submit" type="submit">Prepare email draft <span aria-hidden="true">↗</span></button>
+              <a class="button button-outline form-email-link" id="form-email-link" href="mailto:ayaz.amiriofficial@gmail.com" hidden>Continue in email app <span aria-hidden="true">↗</span></a>
+              <p class="form-note" id="form-note" aria-live="polite">Prepare your message here, then open it in your email app to send. This website doesn’t store form submissions.</p>
+            </form>
+            <a class="contact-email" href="mailto:ayaz.amiriofficial@gmail.com">Or email me directly <span aria-hidden="true">↗</span></a>
+          </div>
           <div class="contact-side reveal"><div class="contact-circle" aria-hidden="true"><span>LET’S<br>CONNECT</span><span class="contact-circle-arrow">↗</span></div><p>Currently based in<br><strong>Chemnitz, Germany</strong></p><div class="social-links"><a href="https://www.linkedin.com/in/mohammad-ayaz-amiri-90719218b/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/ayazamiriofficial-hub" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
           <div class="contact-bottom"><span>MOHAMMAD AYAZ AMIRI</span><span>MADE WITH INTENTION · <a href="#home">BACK TO TOP ↑</a></span><span>© <span id="current-year">2026</span></span></div>
         </div>

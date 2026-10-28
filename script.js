@@ -3,9 +3,31 @@ const navigation = document.querySelector("#primary-navigation");
 const navigationLinks = navigation.querySelectorAll("a");
 const sections = document.querySelectorAll("main section[id]");
 const year = document.querySelector("#current-year");
+const contactForm = document.querySelector("#contact-form");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 year.textContent = String(new Date().getFullYear());
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!contactForm.reportValidity()) return;
+
+  const formData = new FormData(contactForm);
+  const message = [
+    `Name: ${formData.get("name")}`,
+    `Email: ${formData.get("email")}`,
+    `Phone: ${formData.get("phone") || "Not provided"}`,
+    "",
+    String(formData.get("message"))
+  ].join("\n");
+  const subject = `Portfolio enquiry from ${formData.get("name")}`;
+  const mailto = `mailto:ayaz.amiriofficial@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  const emailLink = document.querySelector("#form-email-link");
+  emailLink.href = mailto;
+  emailLink.hidden = false;
+  document.querySelector("#form-note").textContent = "Your message is ready. Choose “Continue in email app” to open a draft. Nothing is sent until you send it.";
+  emailLink.focus();
+});
 
 function setMenuOpen(isOpen) {
   menuButton.setAttribute("aria-expanded", String(isOpen));
